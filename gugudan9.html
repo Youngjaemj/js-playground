@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+    <h1>while문 응용으로 2~9가 입력 될 때 까지 숫자 입력받기</h1>
+    <script>
+        var strN = prompt("출력할 단 수를 입력해 주세요");
+        var n = Number(strN);
+
+        while (n < 2 || n > 9) { //n 이 2보다 작고(0~1), 9보다 클때(10~)
+            var s = Number(prompt("2이상 9이하의 수를 입력해 주세요")); // 이 변수를 반복한다.
+            
+            if (1 < s < 10) {  // s가 1보다 크고 10보다 작을 때(2~9) n = s와 같다(2~9) 
+                n = s;    // (n = s와 같다(2~9) 2~9가 되면 while조건에 의해 스탑됨.
+                console.log(n, s)
+            }
+
+        }  
+
+                for (var i = 1; i <= 9; i++) {
+                var ret = n * i;
+                document.write(n + " * " + i + " = " + ret + "<br/>");
+                }   
+    </script>
+</body>
+</html>
